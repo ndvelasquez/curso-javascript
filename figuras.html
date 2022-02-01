@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometric figures calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <h1>Geometric figures Calculator</h1>
+    </header>
+
+    <section class="main">
+        <div class="card">
+            <h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 2c1.654 0 3 1.346 3 3v14c0 1.654-1.346 3-3 3h-14c-1.654 0-3-1.346-3-3v-14c0-1.654 1.346-3 3-3h14zm0-2h-14c-2.762 0-5 2.239-5 5v14c0 2.761 2.238 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5z"/></svg>
+                Square
+            </h2>
+            <form class="main__card__form">
+                <div class="form__group">
+                    <label for="square_side">
+                        <span>side length in centimeters (cm)</span>
+                        <input type="number" name="square_side" id='square_side' required />
+                    </label>
+                </div>
+                
+                <div class="main__card__buttons">
+                    <button type="button" onclick="calculateSquarePerimeter()">Calculate perimeter</button>
+                    <button type="button" onclick="calculateSquareArea()">Calculate area</button>
+                </div>
+
+                <div class="form__group">
+                    <p class="form__field--center" id="square_result"></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>
+                <svg class="figure" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.574 3.712c.195-.323.662-.323.857 0l9.37 15.545c.2.333-.039.757-.429.757l-18.668-.006c-.385 0-.629-.422-.428-.758l9.298-15.538zm.429-2.483c-.76 0-1.521.37-1.966 1.111l-9.707 16.18c-.915 1.523.182 3.472 1.965 3.472h19.416c1.783 0 2.879-1.949 1.965-3.472l-9.707-16.18c-.446-.741-1.205-1.111-1.966-1.111z"/></svg>
+                Triangle
+            </h2>
+            <p>indicate the triangle specifications:</p>
+            <form class="main__card__form">
+                <div class="form__group">
+                    <label class="form__label" for="triangle_side1">
+                        <span>first side (cm)</span>
+                        <input id="triangle_side1" type="number" min="0">
+                    </label>
+                </div>
+
+                <div class="form__group">
+                    <label for="triangle_side2">
+                        <span>second side (cm)</span>
+                        <input id="triangle_side2" type="number" min="0">
+                    </label>
+                </div>
+
+                <div class="form__group">
+                    <label for="triangle_base">
+                        <span>base (cm)</span>
+                        <input id="triangle_base" type="number" min="0">
+                    </label>
+                </div>
+
+                <div class="form__group">
+                    <label for="triangle_height">
+                        <span>height (cm)</span>
+                        <input id="triangle_height" type="number" min="0">
+                    </label>
+                </div>
+
+                <div class="main__card__buttons">
+                    <button type="button">Calculate perimeter</button>
+                    <button type="button">Calculate area</button>
+                </div>
+                <div class="form__group">
+                    <p class="form__field--center" id="triangle_result"></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12z"/></svg>
+                Circle
+            </h2>
+            <form class="main__card__form">
+                <div class="form__group">
+                    <label for="radius">
+                        <span>radius length in centimeters (cm)</span>
+                        <input id="radius" type="number" min="0">
+                    </label>
+                </div>
+                <div class="main__card__buttons">
+                    <button type="button">Calculate perimeter</button>
+                    <button type="button">Calculate area</button>
+                </div>
+                <div class="form__group">
+                    <p class="form__field--center" id="circle_result"></p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="./figuras.js"></script>
+    <script src="./animaciones-extras.js"></script>
+</body>
+</html>
