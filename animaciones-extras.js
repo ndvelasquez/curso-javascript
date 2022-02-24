@@ -1,4 +1,4 @@
-/* ANIMACIONES PARA ELEMENTOS DE UN FORMULARIO */
+/* ANIMACIONES PARA ELEMENTOS DE LOS FORMULARIOS */
 
 const inputs = document.querySelectorAll('input');
 

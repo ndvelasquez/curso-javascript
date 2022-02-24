@@ -2,7 +2,7 @@
 const arithmeticAverage = (list) => {
     const sumList = list.reduce((sum = 0, currentElement) => sum + currentElement);
 
-    sumList / list.length;
+    return sumList / list.length;
 }
 
 /* Calcular la media aritmetica ponderada (usando de ejemplo un calculo de calificaciones de acuerdo a los creditos de cada asignatura)*/
@@ -56,3 +56,35 @@ const mode = (list) => {
 
     return mode;
 }
+
+/* CAPTURO LOS ELEMENTOS DEL HTML */
+/* Funcion para llenar el array con la informacion enviada del html */
+const fillArray = () => {
+    userInput = document.getElementById("number_value");
+    userValue = parseInt(userInput.value);
+    userList.push(userValue);
+    userInput.value = '';
+    // inserto los elementos en el html
+    document.getElementById("number_list").innerHTML = `Number list: ${userList}, `;
+}
+
+/* para calcular la media aritmetica */
+const calculateArithmeticAverage = () => {
+    const result = arithmeticAverage(userList);
+    document.getElementById("arithmetic_result").innerHTML = `the average is: ${result}`;
+}
+
+/* para calcular la mediana */
+const calculateMedian = () => {
+    const result = median(userList);
+    document.getElementById("arithmetic_result").innerHTML = `the median is: ${result}`;
+}
+
+/* para calcular la moda */
+const calculateMode = () => {
+    const result = mode(userList);
+    document.getElementById("arithmetic_result").innerHTML = `the mode is: ${result}`;
+}
+
+// Declaro un array vacio para llenarlo desde el html
+var userList = [];

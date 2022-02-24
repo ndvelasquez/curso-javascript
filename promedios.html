@@ -5,8 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Averages</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 1024px)">
 </head>
 <body>
-    
+    <header>
+        <h1>Averages Calculator</h1>
+        <h3>Here you'll be able to calculate different averages types</h3>
+    </header>
+    <main class="container">
+        <div class="card card--medium">
+            <p>fill the list with the numbers you want to work with</p>
+            <form class="main__card__form">
+                <div class="form__group">
+                    <label for="number_value">
+                        <span>write the number</span>
+                        <input type="number" min="0" name="number_value" id='number_value' required />
+                    </label>
+                    <button type="button" onclick="fillArray()">+ add number</button>
+                </div>
+
+                <h4 id="number_list">Number list:</h4>
+                
+                <div class=".main__card__button_group">
+                    <button type="button" onclick="calculateArithmeticAverage()">Calculate arithmetic average</button>
+                    <button type="button" onclick="calculateMedian()">Calculate median</button>
+                    <button type="button" onclick="calculateMode()">Calculate mode</button>
+                </div>
+
+                <div class="form__group">
+                    <p class="form__field--center" id="arithmetic_result"></p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="./promedios.js"></script>
+    <script src="./animaciones-extras.js"></script>
 </body>
 </html>
