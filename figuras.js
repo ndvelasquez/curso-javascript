@@ -53,9 +53,9 @@ const calculateTriangleArea = () => {
 }
 
 const calculateTrianglePerimeter = () => {
-    const valueSide1 = document.getElementById("triangle_side1").value;
-    const valueSide2 = document.getElementById("triangle_side2").value;
-    const valueBase = document.getElementById("triangle_base").value;
+    const valueSide1 = parseInt(document.getElementById("triangle_side1").value);
+    const valueSide2 = parseInt(document.getElementById("triangle_side2").value);
+    const valueBase = parseInt(document.getElementById("triangle_base").value);
     const perimeter = trianglePerimeter(valueBase, valueSide1, valueSide2);
     document.getElementById("triangle_result").innerHTML = `perimeter: ${perimeter} cm`;
 }
