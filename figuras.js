@@ -41,7 +41,7 @@ const calculateSquareArea = () => {
 const calculateSquarePerimeter = () => {
     const value = document.getElementById("square_side").value;
     const perimeter = squarePerimeter(value);
-    document.getElementById("square_result").innerHTML = `perimeter: ${perimeter} cm`
+    document.getElementById("square_result").innerHTML = `perimeter: ${perimeter} cm`;
 }
 
 /**PARA CALCULOS DEL TRIANGULO */
@@ -49,6 +49,7 @@ const calculateTriangleArea = () => {
     const valueBase = document.getElementById("triangle_base").value;
     const valueHeight = document.getElementById("triangle_height").value;
     const area = triangleArea(valueBase, valueHeight);
+    document.getElementById("triangle_result").innerHTML = `area: ${area} cm`;
 }
 
 const calculateTrianglePerimeter = () => {
@@ -56,6 +57,7 @@ const calculateTrianglePerimeter = () => {
     const valueSide2 = document.getElementById("triangle_side2").value;
     const valueBase = document.getElementById("triangle_base").value;
     const perimeter = trianglePerimeter(valueBase, valueSide1, valueSide2);
+    document.getElementById("triangle_result").innerHTML = `perimeter: ${perimeter} cm`;
 }
 
 /**PARA CALCULOS DEL CIRCULO */
@@ -63,9 +65,11 @@ const calculateTrianglePerimeter = () => {
 const calculateCirclePerimeter = () => {
     const value = document.getElementById("radius").value;
     const perimeter = circlePerimeter(value);
+    document.getElementById("circle_result").innerHTML = `perimeter: ${perimeter.toFixed(2)} cm`;
 }
 
 const calculateCircleArea = () => {
     const value = document.getElementById("radius").value;
     const area = circleArea(value);
+    document.getElementById("circle_result").innerHTML = `area: ${area.toFixed(2)} cm`;
 }
