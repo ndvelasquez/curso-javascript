@@ -48,7 +48,7 @@ const mode = (list) => {
     /* Creo un objeto que contendrá la cantidad de veces que se repite el elemento del array */
     const listCount = {};
     /* sumo y añado cada elemento del array al objeto */
-    list.map(element => listCount[element] ? listCount[element] =+ 1 : listCount[element] = 1);
+    list.map(element => listCount[element] ? listCount[element] += 1 : listCount[element] = 1);
     /* Convierto el objeto con los elementos en un array y los ordeno por la cantidad de cada elemento de forma ascendente */
     const listArray = Object.entries(listCount).sort((a,b) => a[1] - b[1]);
     /*creo la variable que me mostrará la moda */
